@@ -1,0 +1,344 @@
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #333;
+    color: #fff;
+    overflow-x: hidden; /* Предотвращаем горизонтальную прокрутку страницы */
+}
+
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 20px 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo h1 {
+    margin: 0;
+    color: #ffcc00;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-section, .news-section, .products-section, .about-section, .contact-section {
+    padding: 40px 0;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ffcc00;
+}
+
+p, h3 {
+    font-family: Arial, sans-serif;
+}
+
+/* Стили для новостной ленты */
+.news-section {
+    padding: 40px 0;
+}
+
+.news-section h2 {
+    margin-bottom: 20px;
+    color: #ffcc00;
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    z-index: 10;
+}
+
+.news-section .container {
+    overflow-x: auto; /* Добавляем горизонтальную прокрутку */
+    white-space: nowrap; /* Предотвращаем перенос новостных блоков */
+    padding-bottom: 20px;
+}
+
+.news-list {
+    display: inline-flex;
+    gap: 20px;
+}
+
+.news-item {
+    display: inline-block;
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    flex: 0 0 auto;
+    white-space: normal; /* Восстанавливаем перенос текста внутри новостного блока */
+    transition: transform 0.3s ease; /* Плавный переход для эффекта */
+}
+
+.news-item:hover {
+    transform: scale(1.05); /* Увеличение карточки при наведении */
+}
+
+.news-item img {
+    width: 100%;
+    height: auto;
+}
+
+/* Стили для квадратных карточек товаров */
+.product-list {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-item {
+    background-color: #444;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 250px; /* Ширина карточки */
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s ease; /* Плавный переход для эффекта */
+}
+
+.product-item img {
+    width: 50%;
+    height: auto;
+}
+
+.product-item h3 {
+    color: #ffcc00;
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+
+.product-item p {
+    flex-grow: 1;
+    margin: 5px 0;
+}
+
+.product-item .price {
+    font-size: 1.2em;
+    color: #ffcc00;
+    margin: 10px 0;
+}
+
+.product-item button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-bottom: 10px; /* Добавлено нижнее поле для кнопки */
+}
+
+.product-item button:hover {
+    background-color: #ffaa00;
+}
+
+/* Эффект раскрытия карточки при наведении */
+.product-item:hover {
+    transform: scale(1.05); /* Увеличение карточки */
+}
+
+/* Модальное окно */
+.modal {
+    display: none; /* Скрываем модальное окно по умолчанию */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 5px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    color: #333;
+}
+
+.modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.modal form label {
+    margin: 10px 0 5px;
+}
+
+.modal form input,
+.modal form textarea {
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal form button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modal form button:hover {
+    background-color: #ffaa00;
+}
+
+/* Дополнительные стили для кнопок и форм */
+.contact-section form, footer {
+    text-align: center;
+}
+
+.contact-section button {
+    background-color: #ffcc00;
+    color: #333;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+.contact-section button:hover {
+    background-color: #ffaa00;
+}
+
+.contact-section form input, .contact-section form textarea {
+    width: calc(100% - 40px);
+    padding: 10px;
+    margin: 10px 20px;
+    border: 1px solid #ffcc00;
+    background-color: #555;
+    color: #fff;
+}
+
+footer {
+    padding: 20px 0;
+    background-color: #222;
+}
+
+/* Медиа-запросы для адаптации под мобильные устройства */
+@media (max-width: 768px) {
+    header .container, .container {
+        width: 95%;
+        padding: 0;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .news-section .container {
+        overflow-x: auto; /* Оставляем горизонтальную прокрутку */
+        white-space: nowrap; /* Оставляем горизонтальное расположение */
+    }
+
+    .news-list {
+        display: flex;
+        gap: 10px;
+    }
+
+    .news-item {
+        width: 200px; /* Уменьшаем размер карточек новостей */
+        height: auto;
+    }
+
+    .news-item img {
+        height: auto;
+        max-height: 100px; /* Уменьшаем высоту изображений */
+    }
+
+    .products-section .container {
+        overflow-x: hidden;
+        white-space: normal;
+    }
+
+    .product-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product-item {
+        width: 90%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+
+    .home-section, .news-section, .products-section, .about-section, .contact-section {
+        padding: 20px 0;
+    }
+
+    .product-item img {
+        max-height: 100px;
+    }
+
+    .modal form label, .modal form input, .modal form textarea, .modal form button {
+        width: calc(100% - 20px);
+        margin: 10px;
+    }
+}

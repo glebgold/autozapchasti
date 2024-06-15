@@ -103,9 +103,19 @@ p, h3 {
     transform: scale(1.05); /* Увеличение карточки при наведении */
 }
 
-.news-item img {
+.news-img-container {
     width: 100%;
-    height: auto;
+    padding-top: 75%; /* Соотношение сторон 4:3 */
+    position: relative;
+}
+
+.news-img-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Обрезаем изображение, сохраняя пропорции */
 }
 
 /* Стили для квадратных карточек товаров */
@@ -304,6 +314,10 @@ footer {
         height: auto;
     }
 
+    .news-img-container {
+        padding-top: 75%; /* Соотношение сторон 4:3 */
+    }
+
     .news-item img {
         height: auto;
         max-height: 100px; /* Уменьшаем высоту изображений */
@@ -320,7 +334,7 @@ footer {
     }
 
     .product-item {
-        width: 90%;
+        width: 80%;
         height: auto;
         margin-bottom: 20px;
     }

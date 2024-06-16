@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Автозапчасти</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -88,61 +90,61 @@
         <div class="container">
             <h2>Наши товары</h2>
             <div class="product-list">
-                <div class="product-item">
+                <div class="product-item" data-product='{"name": "Тормозные колодки", "description": "Качественные тормозные колодки для вашего авто.", "price": "1500 сом", "image": "kolodki.jpg"}'>
                     <img src="kolodki.jpg" alt="Тормозные колодки">
                     <h3>Тормозные колодки</h3>
                     <p>Качественные тормозные колодки для вашего авто.</p>
                     <span class="price">1500 сом</span>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                <div class="product-item">
+                <div class="product-item" data-product='{"name": "Масляный фильтр", "description": "Надежный масляный фильтр для защиты двигателя.", "price": "500 сом", "image": "filtr.jpg"}'>
                     <img src="filtr.jpg" alt="Масляный фильтр">
                     <h3>Масляный фильтр</h3>
                     <p>Надежный масляный фильтр для защиты двигателя.</p>
                     <span class="price">500 сом</span>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                <div class="product-item">
+                <div class="product-item" data-product='{"name": "Воздушный фильтр", "description": "Эффективный воздушный фильтр для вашего авто.", "price": "700 сом", "image": "vozduh filtr.jpg"}'>
                     <img src="vozduh filtr.jpg" alt="Воздушный фильтр">
                     <h3>Воздушный фильтр</h3>
                     <p>Эффективный воздушный фильтр для вашего авто.</p>
                     <span class="price">700 сом</span>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                <div class="product-item">
+                <div class="product-item" data-product='{"name": "Свечи зажигания", "description": "Высококачественные свечи зажигания для лучшего старта.", "price": "400 сом", "image": "svechi.jpg"}'>
                     <img src="svechi.jpg" alt="Свечи зажигания">
                     <h3>Свечи зажигания</h3>
                     <p>Высококачественные свечи зажигания для лучшего старта.</p>
                     <span class="price">400 сом</span>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                <div class="product-item">
+                <div class="product-item" data-product='{"name": "Аккумулятор", "description": "Надежный аккумулятор для вашего автомобиля.", "price": "3500 сом", "image": "akkum.jpg"}'>
                     <img src="akkum.jpg" alt="Аккумулятор">
                     <h3>Аккумулятор</h3>
                     <p>Надежный аккумулятор для вашего автомобиля.</p>
                     <span class="price">3500 сом</span>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                <div class="product-item">
+                <div class="product-item" data-product='{"name": "Амортизаторы", "description": "Качественные амортизаторы для комфортной езды.", "price": "2500 сом", "image": "ammort.jpg"}'>
                     <img src="ammort.jpg" alt="Амортизаторы">
                     <h3>Амортизаторы</h3>
                     <p>Качественные амортизаторы для комфортной езды.</p>
                     <span class="price">2500 сом</span>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                <div class="product-item">
+                <div class="product-item" data-product='{"name": "Шины", "description": "Надежные шины для безопасной езды.", "price": "2000 сом", "image": "shina.jpg"}'>
                     <img src="shina.jpg" alt="Шины">
                     <h3>Шины</h3>
                     <p>Надежные шины для безопасной езды.</p>
                     <span class="price">2000 сом</span>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
-                <div class="product-item">
+                <div class="product-item" data-product='{"name": "Автомобильные диски", "description": "Стильные и красивые диски.", "price": "3000 сом", "image": "rims.jpg"}'>
                     <img src="rims.jpg" alt="Диски">
                     <h3>Автомобильные диски</h3>
                     <p>Стильные и красивые диски.</p>
                     <span class="price">3000 сом</span>
-                    <button>Купить</button>
+                    <button class="buy-button">Купить</button>
                 </div>
             </div>
         </div>
@@ -202,6 +204,18 @@
     
                 <button type="submit">Отправить заказ</button>
             </form>
+        </div>
+    </div>
+
+    <!-- Меню с описанием товара -->
+    <div id="productDetail" class="modal full-screen-modal">
+        <div class="modal-content gray-background">
+            <span class="close" id="closeDetail">&times;</span>
+            <h2 id="detailName"></h2>
+            <img id="detailImage" src="" alt="">
+            <p id="detailDescription"></p>
+            <span class="price" id="detailPrice"></span>
+            <p class="additional-info">Этот товар доступен для заказа с доставкой по всей стране.</p>
         </div>
     </div>
 

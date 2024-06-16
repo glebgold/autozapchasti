@@ -1,6 +1,6 @@
 /* Основные стили */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -25,6 +25,7 @@ header .container {
 .logo h1 {
     margin: 0;
     color: #ffcc00;
+    font-family: 'Roboto', sans-serif;
 }
 
 nav ul {
@@ -60,7 +61,8 @@ h2 {
 }
 
 p, h3 {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
+    color: #fff; /* Устанавливаем цвет текста */
 }
 
 /* Стили для новостной ленты */
@@ -139,10 +141,11 @@ p, h3 {
     padding: 10px;
     text-align: center;
     transition: transform 0.3s ease; /* Плавный переход для эффекта */
+    cursor: pointer; /* Добавляем курсор указатель */
 }
 
 .product-item img {
-    width: 50%;
+    width: 100%;
     height: auto;
 }
 
@@ -204,6 +207,17 @@ p, h3 {
     border-radius: 5px;
 }
 
+.full-screen-modal {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    border-radius: 0;
+}
+
+.gray-background {
+    background-color: #ccc; /* Серый фон */
+}
+
 .close {
     color: #aaa;
     float: right;
@@ -250,6 +264,25 @@ p, h3 {
 
 .modal form button:hover {
     background-color: #ffaa00;
+}
+
+/* Стили для нового модального окна */
+#productDetail .modal-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+#productDetail img {
+    max-width: 50%; /* Уменьшаем размер изображения */
+    height: auto;
+    margin: 20px 0;
+}
+
+#productDetail .additional-info {
+    color: #000; /* Черный цвет для дополнительной информации */
 }
 
 /* Дополнительные стили для кнопок и форм */
